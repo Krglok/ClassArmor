@@ -1,0 +1,43 @@
+name: ClassArmor
+main: com.kdude63.armorperms.ArmorPerms
+version: 4.0
+description: Control armor usage with permissions nodes. Permission based on material.
+author: krglok
+dev-url: http://dev.bukkit.org/server-mods/classarmor/
+commands:
+    armor:
+        description: Admin and Info of the Config
+        usage: |
+           /ap perms , check the permissions 
+           /ap list , the ArmorType and MaterialType from config
+           /ap messages, shown from config
+           /ap enable , the armor check  (default)
+           /ap disable , the armor check
+           /ap debug , toggle debug message in the logfile on/off
+        permission: classarmor.admin 
+    classarmor:
+        description: Admin and Info of the Config
+        usage: |
+           /armorperms perms , check the permissions 
+           /armorperms list , the ArmorType and MaterialType from config
+           /armorperms messages, shown from config
+           /armorperms enable , the armor check  (default)
+           /armorperms disable , the armor check
+           /armorperms debug , toggle debug message in the logfile on/off
+permissions:
+    classarmor.admin:
+        description: Gives access to all commands (default Op)
+        default: op
+    classarmor.perms:
+        description: Gives access to command /armorperms perms (default everyone)
+        default: true
+    classarmor.diamond:
+        default: false
+    classarmor.gold:
+        default: false
+    classarmor.chainmail:
+        default: false
+    classarmor.iron:
+        default: false
+    classarmor.leather:
+        default: false

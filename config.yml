@@ -1,0 +1,37 @@
+#  @version v0.1
+# 
+#  @author by krglok
+#  
+# separate list for Material and Armors
+# new mode , checks only the the material permission of all armor s in ArmorType 
+# new MessageMaterial for the new mode
+# new debug flag , can be toggle due to command
+# new enabled flag, can be toggle due to command
+
+MessageMaterial: "You aren''t permitted to wear this armor."
+#MessageMaterial: "Du darfst diese Ruestung nicht tragen!"
+# These messages will be displayed varying by the material of the armor that they try to put on."
+
+Color: "4"
+# The messages that the user sees will be displayed in this color.
+# Use a letter/number from http://www.minecraftwiki.net/wiki/Classic_server_protocol#Color_Codes to change the color.
+# You can use colors and the various types of formatting found in the page above.
+
+MaterialTyp:
+- DIAMOND
+- GOLD
+- CHAINMAIL
+- IRON
+- LEATHER
+ArmorTyp:
+- HELMET
+- CHESTPLATE
+- LEGGINGS
+- BOOTS
+# Dont uses Item Id in MaterialType and ArmorType 
+# Strings are CaseSeNSitive !!
+debug: false
+# True make Debug Messages in the server log
+enabled: true
+# true = enable the armor check (default), can be toggle due to command by ops
+ 
