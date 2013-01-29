@@ -44,6 +44,7 @@ public final class ClassArmor extends JavaPlugin {
 //	public HandleVaultPermission perms = new HandleVaultPermission(this);
 	
 	Logger log = Logger.getLogger("Minecraft");
+	
 
 	/**
 	 * Enable Plugin Read the Config File
@@ -55,12 +56,13 @@ public final class ClassArmor extends JavaPlugin {
 		
 		//  create ConfigManager
 		configMgr = new ConfigManager(this);
+		
 
 		// set the command executor 
-		this.getCommand("classarmor").setExecutor(new CommandExecuter(this));
-		this.getCommand("ap").setExecutor(new CommandExecuter(this));
+		this.getCommand(CommandExecuter.cmd1).setExecutor(new CommandExecuter(this));
+		this.getCommand(CommandExecuter.cmd2).setExecutor(new CommandExecuter(this));
 
-		log(" version " + this.getDescription().getVersion() + " enabled",
+		log(" version " + this.getDescription().getVersion() + " ready",
 				Level.INFO);
 		db.info("Debug = "+configMgr.debugmode.toString());
 	}

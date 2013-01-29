@@ -5,16 +5,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-//import org.bukkit.plugin.Plugin;
-
-//import com.gmail.nossr50.api.ExperienceAPI;
-//import com.gmail.nossr50.datatypes.McMMOPlayer;
-//import com.gmail.nossr50.datatypes.SkillType;
-//import com.gmail.nossr50.datatypes.McMMOPlayer;
-
-//import com.google.common.base.Joiner;
-
-//import com.krglok.classarmor.*;
 
 /**
  * 
@@ -24,6 +14,9 @@ import org.bukkit.entity.Player;
 public class CommandExecuter implements CommandExecutor {
 	private final ClassArmor plugin;
 
+	public static String cmd1 = "classarmor";
+	public static String cmd2 = "ap";
+	
 	/*
 	 * This command executor needs to know about its plugin from which it came
 	 * from
@@ -37,7 +30,7 @@ public class CommandExecuter implements CommandExecutor {
 	 */
 	public boolean onCommand(CommandSender sender, Command command,
 			String label, String[] args) {
-		plugin.db.info("Command : armorperms " + args.toString());
+		plugin.db.info(command.getName()+" " + args.toString());
 		// check command always ewayable
 		if (args.length > 0) {
 			if (args[0].equalsIgnoreCase("perms")) {
