@@ -1,7 +1,8 @@
 ClassArmor
 ==========
 
-This plugin give permissions based on groups and armormaterial
+This plugin Control the armor wearing based on permissions groups 
+the permissions will be given for armormaterial [Leather, Iron, etc.]
 
 The plugin is a fork from ArmorPerms. All credits go to kdude63 .
 
